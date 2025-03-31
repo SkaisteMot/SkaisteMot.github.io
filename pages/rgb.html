@@ -12,9 +12,279 @@
             <a href="event.html">Event</a>
           </div>
         <h1>RGB Camera</h1>
-        <p>The RGB HDR Camera is a standard visual imaging device designed to capture images and videos with enhanced dynamic range. High Dynamic Range (HDR) 
-          technology allows the camera to capture details in both very bright and very dark areas, making it suitable for various real-world lightning conditions. 
-          In this project, the RGB HDR camera plays an important role in demonstrating machine learning applications.
-          </p>
+        <p>
+          RGB cameras are one of the most widely used imaging devices, capturing visible light to produce colour images.
+          These cameras play a crucial role in various fields, including photography, computer vision, surveillance and 
+          robotics. They function by converting light from the environment into digital signals using a combination of 
+          optical and electronic components. <br>
+          The process of capturing an image with an RGB camera follows a structured approach. A lens focuses the incoming
+          light onto the image sensor. The image sensor is covered with a colour filter array (CFA) which filter the light
+          allowing only specific wavelengths (red, green, blue) to pass through. The image sensor, typically a complementary 
+          metal-oxide semiconductor (CMOS), which converts light into electrical signals. The raw data is then processed by 
+          the image signal processor (ISP), which applies colour correction, noise reduction and demosaicing to produce the 
+          final image. 
+        </p>
+        <img src="../images/rgb_process.png" alt="Image Capture Pipeline">
+        <h2> Optical Components</h2>
+        <h3>Visible Light</h3>
+        <P>
+          The visible light spectrum is a segment of the electromagnetic spectrum that is visible to the human eye.
+          RGB cameras are specifically designed to capture this visible range, transforming the colours we see into a 
+          digital format. Standard RGB camera sensors are sensitive to wavelengths between 400 to 700 nanometres(nm), 
+          where 1 nanometre represents the wavelength of light, which is essentially the distance between successive 
+          peaks of the light wave. 
+        </P>
+        <img src="../images/em_spec.png" alt="electromagnetic spectrum">
+        <h3>Lens</h3>
+        <p>
+          The lens is a crucial component of an RGB camera, as it determines the quality and clarity of the captured 
+          image. Key characteristics of camera lenses include: 
+        </p>
+        <ul>
+          <li>
+            Focal length -Determines the field of view (FOV) and magnification of the scene projected onto the camera 
+            sensor. 
+            <ul>
+              <li>
+                A shorter focal length results in a wider FOV, allowing more of the scene to be captured. 
+              </li>
+              <li>
+                A longer focal length provides a narrower FOV, effectively magnifying a smaller portion of the scene 
+              </li>
+            </ul>
+          </li>
+          <li>
+            Aperture - Controls the amount of light entering the camera, affecting exposure and depth of field. It is 
+            expressed as an f-number f/N, where N represents the aperture value. 
+            <ul>
+              <li>
+                A smaller f-number (e.g. 1/1.8) means a larger aperture, allowing more light to enter. This is useful 
+                in low-light conditions and creates a shallow depth of field, where the subject is in sharp focus while 
+                the background is blurred. 
+              </li>
+              <li>
+                A larger f-number (e.g. 1/16) means a smaller aperture, restricting light intake. This helps prevent 
+                overexposure in bright conditions and increases depth of field, keeping more of the scene in focus. 
+              </li>
+            </ul>
+          </li>
+          <li>
+            Lens type - Different lens types are designed for specific applications such as
+            <ul>
+              <li>
+                Fixed-focus lenses –Common in compact cameras and smartphones 
+              </li>
+              <li>
+                Zoom lenses - offer adjustable focal lengths for flexible framing 
+              </li>
+              <li>
+                Wide-angle lenses - Capture larger scenes and are used in surveillance and action cameras.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Image Sensor</h2>
+        <p>
+          Image sensors capture incoming light (photons) and converts them into electrical signals. Image sensors 
+          consist of millions of photodiodes (pixels), and each of these pixels converts the incoming light into an 
+          electrical charge. The amount of charge accumulated in each pixel is directly proportional to the intensity 
+          of the light that hits it.  <br>
+          An image sensor is a semiconductor device that converts optical images into digital signals. It operates 
+          using the photoelectric effect, where incoming light is converted into an electrical signal proportional to 
+          its intensity. However, image sensors do not measure colour, only the intensity of the light. To extract colour 
+          information, a colour filter array (CFA), such as the Bayer filter, is placed over the sensors pixels. Each 
+          pixel under the CFA only records light of a certain wavelength (red, green or blue). The image signal processor 
+          (ISP) then uses a process called demosaicing to reconstruct a full-colour image by interpolating the colour 
+          information for each pixel based on the values of its neighbouring pixels. <br>
+          A typical image sensor consists of three main components:  
+        </p>
+        <ul>
+          <li>
+            Microlens – Focuses incoming light onto the photodiodes to improve sensitivity 
+          </li>
+          <li>
+            CFA – Assigns colour information to each pixel (discussed in section 1.4) 
+          </li>
+          <li>
+            Photodiodes – convert light into electrical charges 
+          </li>
+        </ul>
+        <p>
+          The steps involved in capturing an image using an image sensor are: 
+        </p>
+        <ul>
+          <li>
+            Light enters the camera and is focused onto the sensor by the lens 
+          </li>
+          <li>
+            Light passes through the CFA, which filters specific wavelengths for each pixel. Since the sensor 
+            only detects light intensity, each pixel records only one colour component. 
+          </li>
+          <li>
+            The photodiodes accumulate charge based on the intensity of the filtered light. The stronger the light,
+            the more charge is generated  
+          </li>
+          <li>
+            The sensor read out pixel values. This process varies depending onto the sensor type 
+          </li>
+          <li>
+            The raw sensor data undergoes colour reconstruction and additional processing in the ISP 
+          </li>
+        </ul>
+        <h3> Charge Coupled Devices (CCD)</h3>
+        <p>
+          The Charge-Coupled Device (CCD) was one of the first digital imaging sensor technologies. A CCD 
+          sensor is divided into a large array of light-sensitive areas called pixels. When light, in the form 
+          of photons, strikes a pixel, it is converted into one or more electrons. The number of electrons collected 
+          in each pixel is directly proportional to the intensity of the light incident on that pixel. This charge 
+          pattern across the array represents the captured image. 
+        </p>
+        <img src="../images/ccd.png" alt="CCD Image Sensor">
+        <p>CCD Readout Process: </p>
+        <ul>
+          <li>
+            The charge pattern across the pixel array represents the captured image. 
+          </li>
+          <li>
+            The charge from each pixel is transferred row by row down the array to a readout register.  
+          </li>
+          <li>
+            The register moves the charge horizontally, one pixel at a time, to an output amplifier. 
+          </li>
+          <li>
+            At the amplifier, the charge is converted into a voltage, which is then digitized by an Analog-to-Digital 
+            converted (ADC). 
+          </li>
+        </ul>
+        <p>
+          Because the entire array is read through a single output amplifier, CCD sensors produce low noise and high 
+          image quality. They typically use a global shutter, meaning all pixels start and stop exposure simultaneously. 
+          This is advantageous for capturing fast-moving objects without distortion. However, CCD technology has been 
+          largely replaced by CMOS sensors due to their higher power consumption, generally requiring higher voltage 
+          levels (Eg 7 to 10V), slower readout speed, and more complex manufacturing process. 
+        </p>
+        <h3> Complementary Metal-Oxide Semiconductor (CMOS)</h3>
+        <p>
+          Complementary Metal-Oxide Semiconductor (CMOS) image sensors have become the dominant technology in modern 
+          digital imaging, largely due to their inherent advantages in speed, power efficiency and manufacturing cost. 
+          While both CMOS and CCD sensors serve the fundamental purpose of converting light into an electrical signal 
+          using an array of light-sensitive pixels, their architectural differences lead to significant variations in 
+          performance and application suitability.  <br>
+          Like CCDs, each pixel in a CMOS sensor contains a photodiode that generates an electrical charge when struck 
+          by photons. However, the subsequent processing and readout distinguish CMOS sensors. 
+        </p>
+        <img src="../images/CMOS.png" alt="CMOS Image Sensor">
+        <p>CMOS readout process:</p>
+        <ul>
+          <li>
+            On-pixel charge-to-voltage conversion and amplification: A key architectural difference in CMOS sensors is 
+            that the conversion of the accumulated charge into a voltage signal occurs directly within each individual 
+            pixel. Each pixel typically includes its own amplifier and transistors. This on-pixel processing contrasts 
+            with CCDs, where the charge is transferred to a separate output node for conversion. 
+          </li>
+          <li>
+            Parallel readout: The presence of amplifiers and transistors within each pixel enables a more parallel 
+            readout architecture in CMOS sensors. Instead of sequentially shifting charge across the entire chip, 
+            each pixel's voltage can be read out more independently, often line by line or row by row. 
+          </li>
+          <li>
+            Column-wise processing: After the initial amplification within the pixel, the signals often undergo 
+            further processing by circuits located at the end of each column. 
+          </li>
+          <li>
+            Integrated ADC: A significant advantage of CMOS technology is the ability to integrate ADCs directly onto 
+            the sensor chip. This on chip digitization further contributes to faster data processing and reduces the 
+            need for off-chip components. 
+          </li>
+        </ul>
+        <p>
+          This parallel processing architecture is the primary reason why CMOS sensors can achieve much faster readout 
+          speeds compared to CCDs. Additionally, the integration of amplifiers and ADCs on the sensor chip results in 
+          lower power consumption, which is essential for portable and battery-operated devices. The lower voltage 
+          requirements, typically 3 .3V to 5V, also contribute to this power efficiency. 
+        </p>
+        <h2>Colour Filter Array (CFA)</h2>
+        <p>
+          Image sensors are fundamentally ‘colour-blind’, meaning they only detect light intensity and not the colour. 
+          To overcome this limitation and capture colour information, a colour filter array (CFA) is placed over the 
+          surface of the sensor. 
+        </p>
+        <img src="../images/sensor_array.png" alt="Sensor Array with CFA">
+        <h3>Bayer Filter</h3>
+        <p>
+          The most common CFA pattern is the Bayer filter, which arranges red, green and blue filters in a specific 
+          mosaic pattern over the sensor's pixels. This pattern typically consists of 50% green filters, 25% red filters 
+          and 25% blue filters.
+        </p>
+        <img src="../images/bayer_filter.xaml.png" alt="Bayer Colour Filter Array BGGR">
+        <p>
+          This specific arrangement, with twice as many green filters, is designed to mimic the sensitivity of the human 
+          eye, which is more sensitive to green light than to red or blue. By having more green pixels, the sensors can 
+          capture more detail and variation in the green spectrum, resulting in a final image that appears more natural 
+          to human vision. How this works at the pixel level: 
+        </p>
+        <ul>
+          <li>
+            When light passes through the lens and onto the sensor, it first encounters the Bayer filter. 
+          </li>
+          <li>
+            Each individual pixel is covered by only one of the colour filters 
+          </li>
+          <li>
+            As a result, each pixel only measures the intensity of the light that passes through its specific colour 
+            filter 
+          </li>
+          <li>
+            Therefore, after exposure, some pixels will have recorded the intensity of red light, others the intensity 
+            of green light and rest the intensity of blue light. 
+          </li>
+        </ul>
+        <p>
+          Since each pixel only captures information for one colour channel, the raw data from a sensor with a Bayer 
+          filter is not yet a full-colour image. To create a complete colour image, a process called demosaicing 
+          (or cfa interpolation) is necessary. 
+        </p>
+        <h2>Image Signal Processing (ISP)</h2>
+        <p>
+          Once the image sensor captures the light, the raw data is not yet a visually accurate image. The raw data 
+          consists of intensity values recorded by each pixel, but the sensor does not inherently know what colour 
+          each pixel represents. The task of processing this data into a proper image is handled by the image signal 
+          processor (ISP). <br>
+          The ISP is a specialized processor responsible for transforming raw sensor data into a final image. The ISP 
+          knows the layout of the CFA on the sensor and uses that knowledge to reconstruct full-colour images. Some of 
+          the key tasks performed by the isp include: 
+        </p>
+        <ul>
+          <li>
+            Demosaicing(Debayering) - Reconstructs full-colour images from Bayer-filtered raw data by estimating missing 
+            colour values. 
+          </li>
+          <li>
+            White Balance Correction – Adjusts for colour temperature variations in lighting conditions to ensure neutral whites 
+          </li>
+          <li>
+            Noise reduction – reduces sensor noise, especially in low-light conditions, using spatial and temporal filtering techniques 
+          </li>
+          <li>
+            Colour correction – converts raw sensor colour data into a standard colour space (such as sRGB) to match human perception 
+          </li>
+          <li>
+            Tone mapping and Gamma correction – adjusts brightness and contrast to ensure details are visible in both shadows and highlights 
+          </li>
+        </ul>
+        <p>A variety of other image processing techniques can be applied. </p>
+        <h3>Debayering Algorithm</h3>
+        <p>
+          Since each pixel in the Bayer-filtered image captures only one colour component, an algorithm is required to 
+          reconstruct the missing colour information. This process is known as Debayering or Demosaicing.<br>
+          Debayering algorithms interpolate missing colours by analysing neighbouring pixels. The accuracy of this 
+          process significantly affects image quality.<br>
+          The debayering algorithms work by intelligently guessing the missing colour information at each pixel location 
+          based on the colour intensities recorded by its neighbouring pixels of different colours. The choice of 
+          algorithm impacts the final image quality, with more complex algorithms generally providing better results at 
+          the cost of increased computational resources. This process is fundamental to how digital cameras and other 
+          imaging devices capture and produce full-colour images from their colour-blind sensors equipped with a Bayer 
+          filter. 
+        </p>
     </body>
 </html>
