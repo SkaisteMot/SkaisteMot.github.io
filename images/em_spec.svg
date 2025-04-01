@@ -2,61 +2,18 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="200mm"
+   height="25.165415mm"
+   viewBox="0 0 200 25.165415"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="em_spec.svg"
-   inkscape:export-filename="em_spec.svg"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="443.70949"
-     inkscape:cy="275.41808"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <inkscape:grid
-       id="grid1"
-       units="mm"
-       originx="0"
-       originy="0"
-       spacingx="0.99999998"
-       spacingy="1"
-       empcolor="#0099e5"
-       empopacity="0.30196078"
-       color="#0099e5"
-       opacity="0.14901961"
-       empspacing="5"
-       enabled="true"
-       visible="true" />
-  </sodipodi:namedview>
   <defs
      id="defs1" />
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-5,-70.000001)">
     <rect
        style="fill:#000000;fill-opacity:0.176707;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:0"
        id="rect1"
@@ -118,7 +75,6 @@
        x="13.550856"
        y="79.595184"
        id="text5"><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="13.550856"
          y="79.595184"
@@ -129,7 +85,6 @@
        x="68.957787"
        y="79.672958"
        id="text7"><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="68.957787"
          y="79.672958"
@@ -140,12 +95,10 @@
        x="109.68439"
        y="77.274269"
        id="text8"><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="109.68439"
          y="77.274269"
          id="tspan8">Ultra- </tspan><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="109.68439"
          y="85.211746"
@@ -156,7 +109,6 @@
        x="138.44609"
        y="79.595444"
        id="text10"><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="138.44609"
          y="79.595444"
@@ -167,7 +119,6 @@
        x="166.80804"
        y="79.672958"
        id="text11"><tspan
-         sodipodi:role="line"
          style="fill:#000000;fill-opacity:1;stroke-width:0.0999997;stroke-dasharray:none"
          x="166.80804"
          y="79.672958"
@@ -178,7 +129,6 @@
        x="124.54459"
        y="95.113739"
        id="text12"><tspan
-         sodipodi:role="line"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
          x="124.54459"
          y="95.113739"
@@ -189,7 +139,6 @@
        x="55"
        y="95"
        id="text13"><tspan
-         sodipodi:role="line"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
          x="55"
          y="95"
@@ -200,7 +149,6 @@
        x="90"
        y="95"
        id="text13-2"><tspan
-         sodipodi:role="line"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
          x="90"
          y="95"
@@ -211,7 +159,6 @@
        x="158.64857"
        y="94.845207"
        id="text14"><tspan
-         sodipodi:role="line"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
          x="158.64857"
          y="94.845207"
@@ -225,7 +172,6 @@
          x="79.699203"
          y="95.248001"
          id="text13-3"><tspan
-           sodipodi:role="line"
            style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="79.699203"
            y="95.248001"
