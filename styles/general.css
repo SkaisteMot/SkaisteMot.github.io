@@ -1,29 +1,39 @@
 h1{
-    size: 35em;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    size: 35rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h2{
-    size: 30em;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    size: 30rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h3 {
-    size: 25em;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    size: 25rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
-    size: 18em;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    size: 18rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
-    size: 18em;
+    padding-left: 7rem;
+    padding-right: 5rem;
+    size: 18rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 li{
-    size: 18em;
+    size: 18rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -34,8 +44,9 @@ img{
 
 figcaption{
   color: #383838;
-  size: 12em;
-  padding: 2px;
+  size: 12rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
   font-style: italic;
   text-align: center;
 }
