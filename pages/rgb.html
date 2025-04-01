@@ -25,7 +25,10 @@
           the image signal processor (ISP), which applies colour correction, noise reduction and demosaicing to produce the 
           final image. 
         </p>
-        <img src="../images/rgb_process.png" alt="Image Capture Pipeline">
+        <figure>
+          <img src="../images/rgb_process.png" alt="Image Capture Pipeline">
+          <figcaption>Figure 1. Image Capture Process</figcaption>
+        </figure>
         <h2> Optical Components</h2>
         <h3>Visible Light</h3>
         <P>
@@ -35,7 +38,10 @@
           where 1 nanometre represents the wavelength of light, which is essentially the distance between successive 
           peaks of the light wave. 
         </P>
-        <img src="../images/em_spec.svg" alt="electromagnetic spectrum">
+        <figure>
+          <img src="../images/em_spec.svg" alt="electromagnetic spectrum">
+          <figcaption>Figure 2. Electromagnetic Spectrum</figcaption>
+        </figure>
         <h3>Lens</h3>
         <p>
           The lens is a crucial component of an RGB camera, as it determines the quality and clarity of the captured 
@@ -140,7 +146,10 @@
           in each pixel is directly proportional to the intensity of the light incident on that pixel. This charge 
           pattern across the array represents the captured image. 
         </p>
-        <img src="../images/ccd.svg" alt="CCD Image Sensor">
+        <figure>
+          <img src="../images/ccd.svg" alt="CCD Image Sensor">
+          <figcaption>Figure 3. CCD Image Sensor</figcaption>
+        </figure>
         <p>CCD Readout Process: </p>
         <ul>
           <li>
@@ -174,7 +183,10 @@
           Like CCDs, each pixel in a CMOS sensor contains a photodiode that generates an electrical charge when struck 
           by photons. However, the subsequent processing and readout distinguish CMOS sensors. 
         </p>
-        <img src="../images/CMOS.svg" alt="CMOS Image Sensor">
+        <figure>
+          <img src="../images/CMOS.svg" alt="CMOS Image Sensor">
+          <figcaption>Figure 4. CMOS Image Sensor</figcaption>
+        </figure>
         <p>CMOS readout process:</p>
         <ul>
           <li>
@@ -210,14 +222,20 @@
           To overcome this limitation and capture colour information, a colour filter array (CFA) is placed over the 
           surface of the sensor. 
         </p>
-        <img src="../images/sensor_array.svg" alt="Sensor Array with CFA">
+        <figure>
+          <img src="../images/sensor_array.svg" alt="Sensor Array with CFA">
+          <figcaption>Figure 5. Sensor Array with CFA</figcaption>
+        </figure>
         <h3>Bayer Filter</h3>
         <p>
           The most common CFA pattern is the Bayer filter, which arranges red, green and blue filters in a specific 
           mosaic pattern over the sensor's pixels. This pattern typically consists of 50% green filters, 25% red filters 
           and 25% blue filters.
         </p>
-        <img src="../images/bayer_filter.svg" alt="Bayer Colour Filter Array BGGR">
+        <figure>
+          <img src="../images/bayer_filter.svg" alt="Bayer Colour Filter Array BGGR">
+          <figcaption>Figure 6. Bayer Colour Filter Array (BGGR)</figcaption>
+        </figure>
         <p>
           This specific arrangement, with twice as many green filters, is designed to mimic the sensitivity of the human 
           eye, which is more sensitive to green light than to red or blue. By having more green pixels, the sensors can 

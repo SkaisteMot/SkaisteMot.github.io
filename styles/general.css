@@ -31,3 +31,11 @@ img{
     display: block;
     margin:auto
 }
+
+figcaption{
+  color: #383838;
+  size: 12em;
+  padding: 2px;
+  font-style: italic;
+  text-align: center;
+}
