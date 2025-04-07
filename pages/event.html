@@ -5,6 +5,11 @@
       <link rel="stylesheet" href="../styles/general.css">
     </head>
     <body>
+        <div class="titlebar">
+          <img src="../data/UGLogo.svg" alt="NUIG Logo" width="200" height="100" class="uglogo">
+          <h1>Sensor Rig</h1>
+          <img src="../data/eee-car-logo.jpg" alt="CAR Logo" class="car">
+        </div>
         <div class="topnav" id="myTopnav">
             <a href="../index.html">Home</a>
             <a href="rgb.html" >RGB</a>
@@ -19,7 +24,7 @@
           rate, like RGB cameras, event cameras asynchronously measure per-pixel brightness change in a scene. They 
           output a stream of events, where each event encodes the time, location (pixel coordinate) and sign (increase 
           or decrease) of the brightness change. This event-driven approach marks a paradigm shift in how visual 
-          information is acquired. 
+          information is acquired [17]. 
         </p>
         <h2>Components</h2>
         <ul>
@@ -50,7 +55,7 @@
             Readout mechanism: The generated events are transmitted from the pixel array to the periphery and then out of 
             the camera using a shared digital output bus. This often employs an address-event representation (AER) 
             readout, which allows for efficient transmission of sparse event data. Readout rates can range from 2MHz to 
-            1200MHz, depending on the specific chip and type of hardware interface. 
+            1200MHz [17], depending on the specific chip and type of hardware interface. 
           </li>
         </ul>
         <h2>Pipeline</h2>
@@ -98,6 +103,7 @@
             rate’ to the dynamics of the scene. 
           </li>
         </ul>
+        <img src="../data/event_drop.gif" alt="Event camera detecting an object fall" height="360" width="640">
         <h2>Difference from traditional cameras</h2>
         <p>
           Some of the key differences between event cameras and traditional frame-based cameras: 
@@ -142,6 +148,7 @@
             typically have lower power consumption, especially in static or slowly changing scenes. 
           </li>
         </ul>
+        <img src="../data/event_rgb_hand.gif" alt="Event and RGB camera side by side" height="360" width="640">
         <p>
           These advantages make event cameras particularly suitable for applications where detecting rapid changes and 
           operating in challenging lightning conditions are crucial, such as high-speed robotics, surveillance and HDR 
