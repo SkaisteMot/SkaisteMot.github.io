@@ -5,6 +5,11 @@
       <link rel="stylesheet" href="../styles/general.css">
     </head>
     <body>
+        <div class="titlebar">
+          <img src="../data/UGLogo.svg" alt="NUIG Logo" width="200" height="100" class="uglogo">
+          <h1>Sensor Rig</h1>
+          <img src="../data/eee-car-logo.jpg" alt="CAR Logo" class="car">
+        </div>
         <div class="topnav" id="myTopnav">
             <a href="../index.html">Home</a>
             <a href="rgb.html" class="active">RGB</a>
@@ -14,20 +19,20 @@
           </div>
         <h1>RGB Camera</h1>
         <p>
-          RGB cameras are one of the most widely used imaging devices, capturing visible light to produce colour images.
+          RGB cameras are one of the most widely used imaging devices, capturing visible light to produce colour images [1].
           These cameras play a crucial role in various fields, including photography, computer vision, surveillance and 
           robotics. They function by converting light from the environment into digital signals using a combination of 
-          optical and electronic components. <br>
+          optical and electronic components [2]. <br>
           The process of capturing an image with an RGB camera follows a structured approach. A lens focuses the incoming
           light onto the image sensor. The image sensor is covered with a colour filter array (CFA) which filter the light
           allowing only specific wavelengths (red, green, blue) to pass through. The image sensor, typically a complementary 
-          metal-oxide semiconductor (CMOS), which converts light into electrical signals. The raw data is then processed by 
+          metal-oxide semiconductor (CMOS) [4], which converts light into electrical signals. The raw data is then processed by 
           the image signal processor (ISP), which applies colour correction, noise reduction and demosaicing to produce the 
           final image. 
         </p>
         <figure>
-          <img src="../images/rgb_process.png" alt="Image Capture Pipeline">
-          <figcaption>Figure 1. Image Capture Process</figcaption>
+          <img src="../data/rgb_process.png" alt="Image Capture Pipeline">
+          <figcaption>Figure 1. Image Capture Process, adapted from [2]</figcaption>
         </figure>
         <h2> Optical Components</h2>
         <h3>Visible Light</h3>
@@ -39,7 +44,7 @@
           peaks of the light wave. 
         </P>
         <figure>
-          <img src="../images/em_spec.svg" alt="electromagnetic spectrum">
+          <img src="../data/em_spec.svg" alt="electromagnetic spectrum">
           <figcaption>Figure 2. Electromagnetic Spectrum</figcaption>
         </figure>
         <h3>Lens</h3>
@@ -50,7 +55,7 @@
         <ul>
           <li>
             Focal length -Determines the field of view (FOV) and magnification of the scene projected onto the camera 
-            sensor. 
+            sensor [5]. 
             <ul>
               <li>
                 A shorter focal length results in a wider FOV, allowing more of the scene to be captured. 
@@ -85,7 +90,7 @@
                 Zoom lenses - offer adjustable focal lengths for flexible framing 
               </li>
               <li>
-                Wide-angle lenses - Capture larger scenes and are used in surveillance and action cameras.
+                Wide-angle lenses - Capture larger scenes and are used in surveillance and action cameras [2][5].
               </li>
             </ul>
           </li>
@@ -147,8 +152,8 @@
           pattern across the array represents the captured image. 
         </p>
         <figure>
-          <img src="../images/ccd.svg" alt="CCD Image Sensor">
-          <figcaption>Figure 3. CCD Image Sensor</figcaption>
+          <img src="../data/ccd.svg" alt="CCD Image Sensor">
+          <figcaption>Figure 3. CCD Image Sensor, adapted from [4]</figcaption>
         </figure>
         <p>CCD Readout Process: </p>
         <ul>
@@ -171,7 +176,7 @@
           image quality. They typically use a global shutter, meaning all pixels start and stop exposure simultaneously. 
           This is advantageous for capturing fast-moving objects without distortion. However, CCD technology has been 
           largely replaced by CMOS sensors due to their higher power consumption, generally requiring higher voltage 
-          levels (Eg 7 to 10V), slower readout speed, and more complex manufacturing process. 
+          levels (Eg 7 to 10V), slower readout speed, and more complex manufacturing process [4]. 
         </p>
         <h3> Complementary Metal-Oxide Semiconductor (CMOS)</h3>
         <p>
@@ -184,8 +189,8 @@
           by photons. However, the subsequent processing and readout distinguish CMOS sensors. 
         </p>
         <figure>
-          <img src="../images/CMOS.svg" alt="CMOS Image Sensor">
-          <figcaption>Figure 4. CMOS Image Sensor</figcaption>
+          <img src="../data/CMOS.svg" alt="CMOS Image Sensor">
+          <figcaption>Figure 4. CMOS Image Sensor, adapted from [4]</figcaption>
         </figure>
         <p>CMOS readout process:</p>
         <ul>
@@ -193,7 +198,7 @@
             On-pixel charge-to-voltage conversion and amplification: A key architectural difference in CMOS sensors is 
             that the conversion of the accumulated charge into a voltage signal occurs directly within each individual 
             pixel. Each pixel typically includes its own amplifier and transistors. This on-pixel processing contrasts 
-            with CCDs, where the charge is transferred to a separate output node for conversion. 
+            with CCDs, where the charge is transferred to a separate output node for conversion [8]. 
           </li>
           <li>
             Parallel readout: The presence of amplifiers and transistors within each pixel enables a more parallel 
@@ -214,7 +219,7 @@
           This parallel processing architecture is the primary reason why CMOS sensors can achieve much faster readout 
           speeds compared to CCDs. Additionally, the integration of amplifiers and ADCs on the sensor chip results in 
           lower power consumption, which is essential for portable and battery-operated devices. The lower voltage 
-          requirements, typically 3 .3V to 5V, also contribute to this power efficiency. 
+          requirements, typically 3 .3V to 5V [8], also contribute to this power efficiency. 
         </p>
         <h2>Colour Filter Array (CFA)</h2>
         <p>
@@ -223,17 +228,17 @@
           surface of the sensor. 
         </p>
         <figure>
-          <img src="../images/sensor_array.svg" alt="Sensor Array with CFA">
+          <img src="../data/sensor_array.svg" alt="Sensor Array with CFA">
           <figcaption>Figure 5. Sensor Array with CFA</figcaption>
         </figure>
         <h3>Bayer Filter</h3>
         <p>
-          The most common CFA pattern is the Bayer filter, which arranges red, green and blue filters in a specific 
+          The most common CFA pattern is the Bayer filter [4], which arranges red, green and blue filters in a specific 
           mosaic pattern over the sensor's pixels. This pattern typically consists of 50% green filters, 25% red filters 
           and 25% blue filters.
         </p>
         <figure>
-          <img src="../images/bayer_filter.svg" alt="Bayer Colour Filter Array BGGR">
+          <img src="../data/bayer_filter.svg" alt="Bayer Colour Filter Array BGGR">
           <figcaption>Figure 6. Bayer Colour Filter Array (BGGR)</figcaption>
         </figure>
         <p>
@@ -291,6 +296,63 @@
             Tone mapping and Gamma correction – adjusts brightness and contrast to ensure details are visible in both shadows and highlights 
           </li>
         </ul>
+        <table>
+          <tr>
+            <td>
+              <p>Bayer Input</p>
+              <img src="../data/ISP/dpc.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>CFA Interpolation</p>
+              <img src="../data/ISP/cfa.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Colour Correction</p>
+              <img src="../data/ISP/ccm.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Gamma Correction</p>
+              <img src="../data/ISP/gac.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Non-local Means & Bilateral Filter</p>
+              <img src="../data/ISP/bnf.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Contrast Enhancement</p>
+              <img src="../data/ISP/ceh.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Edge Enhancement</p>
+              <img src="../data/ISP/eeh.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Hue and Saturation Control</p>
+              <img src="../data/ISP/hsc.jpg" height="202" width="304">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Brightness & Contrast Control</p>
+              <img src="../data/ISP/bcc.jpg" height="202" width="304">
+            </td>
+          </tr>
+        </table>
+        <figcaption>Simple ISP Pipeline [19]</figcaption>
         <p>A variety of other image processing techniques can be applied. </p>
         <h3>Debayering Algorithm</h3>
         <p>
