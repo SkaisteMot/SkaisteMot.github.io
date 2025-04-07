@@ -33,3 +33,22 @@
 .topnav .icon {
   display: none;
 }
+
+.titlebar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 5rem;
+}
+
+.titlebar .uglogo{
+  margin-left: 0;
+}
+.titlebar .car{
+  margin-right: 1rem;
+}
+
+.titlebar h1{
+  align-self: center;
+  color:#a80050;
+}
