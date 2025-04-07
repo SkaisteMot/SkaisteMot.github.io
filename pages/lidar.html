@@ -5,6 +5,11 @@
       <link rel="stylesheet" href="../styles/general.css">
     </head>
     <body>
+        <div class="titlebar">
+          <img src="../data/UGLogo.svg" alt="NUIG Logo" width="200" height="100" class="uglogo">
+          <h1>Sensor Rig</h1>
+          <img src="../data/eee-car-logo.jpg" alt="CAR Logo" class="car">
+        </div>
         <div class="topnav" id="myTopnav">
             <a href="../index.html">Home</a>
             <a href="rgb.html">RGB</a>
@@ -14,18 +19,18 @@
           </div>
         <h1>LiDAR (Light Detection and Ranging)</h1>
         <p>
-          Light Detection and Ranging (LiDAR) is a laser-based sensor used to measure distance with high accuracy. 
+          Light Detection and Ranging (LiDAR) is a laser-based sensor used to measure distance with high accuracy [9]. 
           LiDAR is widely used in applications ranging from autonomous vehicles to terrain mapping. LiDAR works by 
           emitting short pulses of laser light from its transmitter. These pulses travel through air until they encounter 
           an object. Once an object is encountered, the light is reflected towards the LiDAR sensor receiver. The time it 
-          takes for the reflected light to return is known as the time-of-flight (TOF). This TOF data is used to calculate 
-          distance, enabling the creation of detailed 3D maps and models. 
+          takes for the reflected light to return is known as the time-of-flight (TOF). This TOF data is used to calculate
+          distance [10], enabling the creation of detailed 3D maps and models. 
         </p>
         <h2>Types of LiDAR</h2>
         <p>
           LiDAR technologies have evolved to suit different applications, with variations in scanning methods, laser types
           , and operational environments. The two primary categories of LiDAR systems are mechanical scanning LiDAR and 
-          solid-state LiDAR. 
+          solid-state LiDAR [9]. 
         </p>
         <h3>Mechanical Scanning LiDAR</h3>
         <p>
@@ -34,18 +39,18 @@
           lasers arranged vertically to cover a vertical angle, capturing detailed point clouds with both horizontal and 
           vertical resolution.<br>
           These LiDARs frequently operate at a wavelength of 905 nm. The more vertical channels, the denser and more 
-          detailed the point cloud will be. 
+          detailed the point cloud will be [9]. 
         </p>
         <figure>
-          <img src="../images/rotating_lidar.svg" alt="Rotating LiDAR">
-          <figcaption>Figure 1. Rotating LiDAR</figcaption>
+          <img src="../data/rotating_lidar.svg" alt="Rotating LiDAR">
+          <figcaption>Figure 1. Rotating LiDAR, adapted from [18]</figcaption>
         </figure>
         <h3>Solid State LiDAR</h3>
         <p>
           Solid-state LiDAR systems have emerged as more compact and robust alternatives to mechanical scanning LiDARs. 
           These systems eliminate moving parts, providing several advantages in terms of reliability and size. Key 
           technologies within solid-state LiDAR include Flash LiDAR, Micro-Electro-Mechanical Systems (MEMS) LiDAR and 
-          Optical Phased Array (OPA) LiDAR. 
+          Optical Phased Array (OPA) LiDAR [11]. 
         </p>
         <h4>Flash LiDAR</h4>
         <p>
@@ -65,8 +70,8 @@
           LiDAR sensor used on the sensor rig is a MEMS LiDAR. 
         </p>
         <figure>
-          <img src="../images/MEMS_LiDAR.svg" alt="MEMS LiDAR">
-          <figcaption>Figure 2. MEMS LiDAR</figcaption>
+          <img src="../data/MEMS_LiDAR.svg" alt="MEMS LiDAR">
+          <figcaption>Figure 2. MEMS LiDAR, adapted from [18]</figcaption>
         </figure>
         <h4>OPA LiDAR</h4>
         <p>
@@ -76,8 +81,8 @@
           use 1300nm and 940nm wavelengths. 
         </p>
         <figure>
-          <img src="../images/OPA_LiDAR.svg" alt="OPA LiDAR">
-          <figcaption>Figure 3. OPA LiDAR</figcaption>
+          <img src="../data/OPA_LiDAR.svg" alt="OPA LiDAR">
+          <figcaption>Figure 3. OPA LiDAR, adapted from [18]</figcaption>
         </figure>
         <p>
           While these are the most used LiDAR types, many other variations exist, each tailored for specific applications. 
@@ -85,7 +90,7 @@
         <h2>Laser</h2>
         <p>
           LiDAR systems utilize various types of lasers operating at different wavelengths. There are three primary 
-          wavelength regions used in LiDAR systems: Near-Infrared, Visible and Short-Wave Infrared. 
+          wavelength regions used in LiDAR systems: Near-Infrared, Visible and Short-Wave Infrared [10]. 
         </p>
         <h3>Wavelengths</h3>
         <h4>Near-Infrared (NIR)</h4>
@@ -114,7 +119,7 @@
         <p>
           Instead of pulses, AMCW LiDAR emits a continuous laser signal whose amplitude is modulated with a specific 
           frequency or pattern. The distance to the target is determined by analysing the phase shift of the modulation 
-          pattern in the reflected signal compared to the emitted signal. AMCW LiDAR is suitable for moderate-range 
+          pattern in the reflected signal compared to the emitted signal [11]. AMCW LiDAR is suitable for moderate-range 
           sensing.  
         </p>
         <h4>Frequency Modulated Continuous Wave (FMCW) LiDAR</h4>
@@ -135,7 +140,7 @@
             <ul>
               <li>
                 Avalanche Photodiodes (APDs) provide internal gain, making them suitable for detecting weak return signals, 
-                especially in longer-range LiDAR applications. 
+                especially in longer-range LiDAR applications [11]. 
               </li>
               <li>
                 Single-Photon Avalanche diodes (SPADs) are utilized in flash LiDAR systems for precise ToF measurements. 
@@ -145,13 +150,13 @@
           </li>
           <li>
             Optical Filters are used to enhance signal-to-noise ratio by blocking unwanted ambient light or other 
-            interfering wavelengths. For instance, a receiver might have a specific filter bandwidth to optimize 
+            interfering wavelengths [10]. For instance, a receiver might have a specific filter bandwidth to optimize 
             detection during day or night. 
           </li>
           <li>
             Timing circuits are critical for measuring ToF of the laser pulses with high precision. The accuracy of the 
             distance measurement in pulsed ToF LiDAR is limited by the resolution in time counting, which is mainly 
-            determined by the electronics timing resolution. 
+            determined by the electronics timing resolution [11]. 
           </li>
           <li>
             Analog-to-Digital Converters (ADCs) are necessary to convert the analogue electrical signals from the 
@@ -199,7 +204,7 @@
               </li>
               <li>
                 The GPS navigation system records the absolute position (latitude, longitude, altitude) of the sensor 
-                platform. 
+                platform [12]. 
               </li>
               <li>
                 The IMU records the angular attitude (roll, pitch, yaw) of the platform, compensating for any movement 
@@ -218,7 +223,7 @@
               <li>
                 The numerous individual distance measurements and their corresponding spatial coordinates are combined 
                 to form the point cloud, which is a collection of vertices in a three-dimensional coordinate system. 
-                These points are intended to represent the exterior surface of the scanned objects or environment. 
+                These points are intended to represent the exterior surface of the scanned objects or environment [13]. 
               </li>
               <li>
                 Each point in the point cloud can contain additional attributes beyond just the (X, Y, Z) coordinates, 
