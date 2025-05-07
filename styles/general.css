@@ -88,8 +88,7 @@ td p{
     padding:0;
 }
 .about_me_header{
-    height: 3rem;
-    padding-left: 1rem;
+    padding: 1rem;
     color: white;
     background-color: #333;
     align-content: center;
